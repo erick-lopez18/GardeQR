@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/styles/global-styles.css" 
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 const activeChainId = ChainId.SolanaDevnet;

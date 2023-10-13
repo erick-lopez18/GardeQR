@@ -1,6 +1,7 @@
 import toast, { Toaster } from "react-hot-toast";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from 'next/link';
 import {
     Connection,
     SystemProgram,
@@ -13,6 +14,14 @@ import {
 import { useStorageUpload } from "@thirdweb-dev/react";
 
 import axios from "axios";
+
+import Main from "./main";
+import Valid from "./valid";
+import Warning from "./warning";
+import Camera from "./camera";
+
+import logo from "@/public/garde-logo.png";
+//import Agrandir from "@/public/fonts/Agrandir-Regular";
 
 const SOLANA_NETWORK = "devnet";
 
@@ -258,128 +267,35 @@ const Home = () => {
             toast.error("Error al generar el NFT");
         }
     };
+/*
+    const agrandir = Agrandir({
+        weight: '400',
+        style: 'normal',
+        subsets: ['latin'],
+    })
+    */
 
     return (
+        // Code for GardeQR starts here
         <div className="h-screen bg-black">
-            <div className="flex flex-col  w-auto h-auto  bg-black">
+            <div className="flex flex-col  w-auto h-auto  garde-bg">
                 <div className="flex flex-col py-24 place-items-center justify-center">
-                    <h1 className="text-5xl font-bold pb-10 text-emerald-300">
-                        Superteach Starter
+                    <img src="/garde-logo.png" alt="GardeQR logo" className="garde-logo"/>
+                    <h1 className="text-5xl font-bold pb-10 garde-brand {roboto.className}">
+                        GardeQR
                     </h1>
+                    
+                    <div className="garde-navbar"></div>
+                    <h1><Main></Main></h1>
 
-                    {publicKey ? (
-                        <div className="flex flex-col py-24 place-items-center justify-center">
-                            <br />
-
-                            <h1 className="text-2xl font-bold text-white">
-                                Tu numero de Wallet es {publicKey}
-                            </h1>
-
-                            <br />
-
-                            <h1 className="text-2xl font-bold text-white">
-                                Tu balance es {balance} SOL
-                            </h1>
-                            <br />
-                            <h1 className="text-2xl  text-white">
-                                Enviar una transaccion a:
-                            </h1>
-
-                            <input
-                                className="h-8 w-72 mt-4   border-2 border-black "
-                                type="text"
-                                onChange={handleReceiverChange}
-                            />
-                            <br />
-                            <h1 className="text-2xl  text-white">
-                                Cantidad de SOL a enviar:
-                            </h1>
-                            <input
-                                className="h-8 w-72 mt-4   border-2 border-black "
-                                type="text"
-                                onChange={handleAmountChange}
-                            />
-                            <br />
-                            <button
-                                type="submit"
-                                className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
-                                onClick={() => {
-                                    handleSubmit();
-                                }}
-                            >
-                                Enviar ⚡
-                            </button>
-                            <br />
-
-                            <a href={explorerLink}>
-                                <h1 className="text-md font-bold text-sky-500">
-                                    {explorerLink}
-                                </h1>
-                            </a>
-                            <br />
-
-                            <h1 className="text-2xl  text-white">
-                                Url del archivo que quieres subir:
-                            </h1>
-
-                            <input
-                                className="h-8 w-52 mt-4 border-2 border-black"
-                                type="float"
-                                onChange={handleUrlChange}
-                            />
-                            <br />
-                            <button
-                                className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
-                                onClick={() => {
-                                    urlToBLob();
-                                }}
-                            >
-                                Subir archivo a IPFS
-                            </button>
-
-                            <br />
-
-                            <p className="text-white font-bold mb-8">
-                                {statusText}
-                            </p>
-
-                            <br />
-
-                            {uploadUrl ? (
-                                <button
-                                    className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
-                                    onClick={() => {
-                                        generateNFT();
-                                    }}
-                                >
-                                    Crear NFT 🔥
-                                </button>
-                            ) : (
-                                <button
-                                    className="inline-flex h-8 w-auto justify-center bg-red-500 font-bold text-white"
-                                    onClick={() => {
-                                        toast.error(
-                                            "Primero sube una imagen a IPFS"
-                                        );
-                                    }}
-                                >
-                                    Primer sube una imagen a IPFS ⚠
-                                </button>
-                            )}
-
-                            <br />
-                            <button
-                                type="submit"
-                                className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
-                                onClick={() => {
-                                    signOut();
-                                }}
-                            >
-                                Desconecta tu wallet 👻
-                            </button>
-                        </div>
-                    ) : (
-                        <div className="flex flex-col place-items-center justify-center">
+                    <div>
+                        <h1>Start page</h1>
+                            <Link href="/valid"> <button class="button-38" role="button">Valid</button> </Link>
+                            <p className="garde-column"></p>
+                            <Link href="/warning"> <button class="button-38" role="button">Warning</button> </Link>
+                     </div>
+                </div>
+                <div className="flex flex-col place-items-center justify-center">
                             <button
                                 type="submit"
                                 className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
@@ -389,10 +305,19 @@ const Home = () => {
                             >
                                 Conecta tu wallet 👻
                             </button>
-                        </div>
-                    )}
-                </div>
+                <button
+                                type="submit"
+                                className="inline-flex h-8 w-52 justify-center bg-purple-500 font-bold text-white"
+                                onClick={() => {
+                                    signOut();
+                                }}
+                            >
+                                
+                                Desconecta tu wallet 👻
+                            </button>
+                            </div>
                 <Toaster position="bottom-center" />
+                
             </div>
         </div>
     );

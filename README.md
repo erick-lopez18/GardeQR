@@ -1,21 +1,23 @@
 # GardeQR
+Preview the app from here: bland-keyboard-jet0.figment.so
+
+A scanning tool designed to protect QR codes from malicious attacks using Solana's blockchain to provide the upper level on security.
+
+# Details for devs
+1. Open VSCode window for Windows Linux subsystem with WSL extension (Shift+Ctrl+P).
+2. Clone repository in VSCode into empty folder.
+3. Open terminal in VSCode options as Linux user. 
+4. Navigate to cloned folder with "cd superteach-starter" using terminal in VSCode.
+5. Run "npm install --force" to install dependencies.
+6. Run "npm install -D tailwindcss --force" to install TailwindCSS.
+7. Run "npm i @solana/web3.js --force" to install Solana Web3.
+8. Run "npm i react-hot-toast --force" to install React Hook Toast.
+9. Run "npm i @thirdweb-dev/react --force" to install ThirdWeb (for uploading decentralized images).
+10. Run "npm i @hellomoon/api --force" to install Hello Moon API.
+11. To deploy application as a test, use "npm run dev".
 
 
-# Vamos equipo!!!
-1. Abrir ventana de VSCode para subsistema Linux de Windows con la extensión WSL (Shift+Ctrl+P).
-2. Clonar repositorio en VSCode en carpeta vacía.
-3. Abrir terminal en las opciones de VSCode como usuario en Linux. 
-4. Navegar a carpeta clonada con "cd superteach-starter" usando terminal en VSCode.
-5. Ejecutar "npm install --force" para instalar dependencias.
-6. Ejecutar "npm install -D tailwindcss --force" para instalar TailwindCSS.
-7. Ejecutar "npm i @solana/web3.js --force" para instalar Solana Web3.
-8. Ejecutar "npm i react-hot-toast --force" para instalar React Hook Toast.
-9. Ejecutar "npm i @thirdweb-dev/react --force" para instalar ThirdWeb (para subir imágenes descentralizadas).
-10. Ejecutar "npm i @hellomoon/api --force" para instalar API de Hello Moon.
-11. Para desplegar aplicación como prueba, usar "npm run dev".
-
-
-# Read-me por defecto
+# Default README
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
