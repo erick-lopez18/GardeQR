@@ -1,3 +1,20 @@
+# GardeQR
+
+
+# Vamos equipo!!!
+1. Abrir ventana de VSCode para subsistema Linux de Windows con la extensión WSL (Shift+Ctrl+P).
+2. Clonar repositorio en VSCode en carpeta vacía.
+3. Abrir terminal en las opciones de VSCode como usuario en Linux. 
+4. Navegar a carpeta clonada con "cd superteach-starter" usando terminal en VSCode.
+5. Ejecutar "npm install --force" para instalar dependencias.
+6. Ejecutar "npm install -D tailwindcss --force" para instalar TailwindCSS.
+7. Ejecutar "npm i @solana/web3.js --force" para instalar Solana Web3.
+8. Ejecutar "npm i react-hot-toast --force" para instalar React Hook Toast.
+9. Ejecutar "npm i @thirdweb-dev/react --force" para instalar ThirdWeb (para subir imágenes descentralizadas).
+
+
+# Read-me por defecto
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
