@@ -11,6 +11,8 @@
 7. Ejecutar "npm i @solana/web3.js --force" para instalar Solana Web3.
 8. Ejecutar "npm i react-hot-toast --force" para instalar React Hook Toast.
 9. Ejecutar "npm i @thirdweb-dev/react --force" para instalar ThirdWeb (para subir imágenes descentralizadas).
+10. Ejecutar "npm i @hellomoon/api --force" para instalar API de Hello Moon.
+11. Para desplegar aplicación como prueba, usar "npm run dev".
 
 
 # Read-me por defecto
